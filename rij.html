@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Video Editor Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #d1c4c4; color: #950c0c; scroll-behavior: smooth; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+    </style>
+    <link rel="stylesheet" href="rij.css">
+</head>
+<body>
+
+    <header class="h-screen flex flex-col justify-center items-center text-center p-6">
+        <h1 class="text-6xl font-black mb-4 tracking-tighter">PROFESSIONAL <span class="text-blue-500">VIDEO EDITOR</span></h1>
+        <p class="text-gray-400 max-w-lg mb-8 text-lg">Crafting cinematic stories and high-impact visual content for brands and creators.</p>
+        <div class="flex gap-4">
+            <a href="mailto:rijseal3@gmail.com" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-bold transition">Email Me</a>
+            <a href="https://instagram.com/usernamehjklghh" target="_blank" class="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-bold transition">Instagram</a>
+        </div>
+    </header>
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 border-l-4 border-blue-500 pl-4">SERVICES I PROVIDE</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+
+            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">Short Form Videos</h3>
+                <p class="text-gray-400 text-sm">
+                    Engaging edits for Reels, Shorts, and TikTok with fast cuts and trending styles.
+                </p>
+            </div>
+
+            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">Long Form Videos</h3>
+                <p class="text-gray-400 text-sm">
+                    Professional YouTube videos, documentaries, and storytelling edits with smooth flow.
+                </p>
+            </div>
+
+            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
+                <h3 class="text-xl font-bold text-blue-400 mb-2">Commercial Ads</h3>
+                <p class="text-gray-400 text-sm">
+                    High-quality ad edits focused on branding, engagement, and conversions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4">RECENT PROJECTS</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="space-y-4">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1Hco55RxwNj0HYZSGqDApoWsYrvbQGpX3/preview" allow="autoplay"></iframe>
+                    </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold">Project Alpha - Youtube shorts</h3>
+                    <a href="https://drive.google.com/file/d/1Hco55RxwNj0HYZSGqDApoWsYrvbQGpX3/preview" class="text-sm text-blue-400 hover:underline">View Source Files</a>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1eiBwonVj8gaaGLhozF7682qqcTJfAci7/preview" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold">Project Beta - Documenting video</h3>
+                    <a href="https://drive.google.com/file/d/1eiBwonVj8gaaGLhozF7682qqcTJfAci7/preview" class="text-sm text-blue-400 hover:underline">View Source Files</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="text-align:center; padding:50px; background:#0a0a0a; color:white;">
+        <h2>Contact Me</h2>
+
+        <!-- Name -->
+        <input 
+            type="text" 
+            id="name" 
+            placeholder="Your Name" 
+            required
+            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
+
+        <!-- Phone -->
+        <input 
+            type="tel" 
+            id="phone" 
+            placeholder="Phone Number"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            title="Enter valid 10 digit phone number"
+            required
+            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
+
+        <!-- Email -->
+        <input 
+            type="email" 
+            id="email" 
+            placeholder="Email Address" 
+            required
+            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
+
+        <!-- Button -->
+        <button onclick="sendToWhatsApp()" 
+            style="padding:10px 20px; margin-top:15px; background:white; color:black; border:none; cursor:pointer;">
+            Send via WhatsApp
+        </button>
+
+        <p style="margin-top:10px; font-size:14px; color:#aaa;">
+            I usually reply within 24 hours
+        </p>
+</section>
+
+<script>
+    function sendToWhatsApp() {
+    var name = document.getElementById("name").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var email = document.getElementById("email").value.trim();
+
+    // Validation
+    if (name === "" || phone === "" || email === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    if (phone.length !== 10) {
+        alert("Phone number must be 10 digits");
+        return;
+    }
+
+    // Message format
+    var message = encodeURIComponent(
+        "📩 New Client Inquiry\n\n" +
+        "👤 Name: " + name + "\n" +
+        "📞 Phone: " + phone + "\n" +
+        "📧 Email: " + email
+    );
+
+    // Replace with your number (no +, no spaces)
+    var whatsappNumber = "919864445866";
+
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+    window.open(url, "_blank");
+    }
+</script>
+</body>
+</html>
