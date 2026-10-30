@@ -1,154 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelance Video Editor Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #d1c4c4; color: #950c0c; scroll-behavior: smooth; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
-    </style>
-    <link rel="stylesheet" href="rij.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-    <header class="h-screen flex flex-col justify-center items-center text-center p-6">
-        <h1 class="text-6xl font-black mb-4 tracking-tighter">PROFESSIONAL <span class="text-blue-500">VIDEO EDITOR</span></h1>
-        <p class="text-gray-400 max-w-lg mb-8 text-lg">Crafting cinematic stories and high-impact visual content for brands and creators.</p>
-        <div class="flex gap-4">
-            <a href="mailto:rijseal3@gmail.com" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-bold transition">Email Me</a>
-            <a href="https://instagram.com/usernamehjklghh" target="_blank" class="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-bold transition">Instagram</a>
+<!-- ══════════════════════════════════════════════
+     LAYOUT  (sidebar + main)
+══════════════════════════════════════════════ -->
+<div class="layout">
+
+  <!-- ─── SIDEBAR ─────────────────────────────── -->
+  <aside class="sidebar">
+
+    <!-- Logo -->
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-music logo-icon"></i>
+      Musify
+    </div>
+
+    <!-- Primary nav -->
+    <nav class="nav-primary">
+      <a class="nav-item active" data-view="home">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+      <a class="nav-item" data-view="search">
+        <i class="fa-solid fa-magnifying-glass"></i> Search
+      </a>
+    </nav>
+
+    <!-- Library -->
+    <div class="sidebar-library">
+      <div class="library-header">
+        <div class="library-header-left">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <span>Your Library</span>
         </div>
-    </header>
-    <section class="py-16 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-10 border-l-4 border-blue-500 pl-4">SERVICES I PROVIDE</h2>
-
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-
-            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
-                <h3 class="text-xl font-bold text-blue-400 mb-2">Short Form Videos</h3>
-                <p class="text-gray-400 text-sm">
-                    Engaging edits for Reels, Shorts, and TikTok with fast cuts and trending styles.
-                </p>
-            </div>
-
-            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
-                <h3 class="text-xl font-bold text-blue-400 mb-2">Long Form Videos</h3>
-                <p class="text-gray-400 text-sm">
-                    Professional YouTube videos, documentaries, and storytelling edits with smooth flow.
-                </p>
-            </div>
-
-            <div class="p-6 bg-zinc-900 rounded-lg border border-zinc-800 hover:border-blue-500 transition">
-                <h3 class="text-xl font-bold text-blue-400 mb-2">Commercial Ads</h3>
-                <p class="text-gray-400 text-sm">
-                    High-quality ad edits focused on branding, engagement, and conversions.
-                </p>
-            </div>
-
-        </div>
-    </section>
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4">RECENT PROJECTS</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="space-y-4">
-                    <div class="video-container">
-                        <iframe src="https://drive.google.com/file/d/1Hco55RxwNj0HYZSGqDApoWsYrvbQGpX3/preview" allow="autoplay"></iframe>
-                    </div>
-                <div class="flex justify-between items-center">
-                    <h3 class="text-xl font-bold">Project Alpha - Youtube shorts</h3>
-                    <a href="https://drive.google.com/file/d/1Hco55RxwNj0HYZSGqDApoWsYrvbQGpX3/preview" class="text-sm text-blue-400 hover:underline">View Source Files</a>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <div class="video-container">
-                    <iframe src="https://drive.google.com/file/d/1eiBwonVj8gaaGLhozF7682qqcTJfAci7/preview" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="flex justify-between items-center">
-                    <h3 class="text-xl font-bold">Project Beta - Documenting video</h3>
-                    <a href="https://drive.google.com/file/d/1eiBwonVj8gaaGLhozF7682qqcTJfAci7/preview" class="text-sm text-blue-400 hover:underline">View Source Files</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section style="text-align:center; padding:50px; background:#0a0a0a; color:white;">
-        <h2>Contact Me</h2>
-
-        <!-- Name -->
-        <input 
-            type="text" 
-            id="name" 
-            placeholder="Your Name" 
-            required
-            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
-
-        <!-- Phone -->
-        <input 
-            type="tel" 
-            id="phone" 
-            placeholder="Phone Number"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-            pattern="[0-9]{10}"
-            maxlength="10"
-            title="Enter valid 10 digit phone number"
-            required
-            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
-
-        <!-- Email -->
-        <input 
-            type="email" 
-            id="email" 
-            placeholder="Email Address" 
-            required
-            style="padding:10px; width:250px; margin:10px; background:#1a1a1a; color:white; border:1px solid #555;"><br>
-
-        <!-- Button -->
-        <button onclick="sendToWhatsApp()" 
-            style="padding:10px 20px; margin-top:15px; background:white; color:black; border:none; cursor:pointer;">
-            Send via WhatsApp
+        <button class="create-pl-btn" id="createPlaylistBtn" title="Create playlist">
+          <i class="fa-solid fa-plus"></i>
         </button>
+      </div>
 
-        <p style="margin-top:10px; font-size:14px; color:#aaa;">
-            I usually reply within 24 hours
-        </p>
-</section>
+      <div class="library-list" id="libraryList">
+        <!-- Liked Songs -->
+        <a class="library-item" data-view="liked" id="likedLibItem">
+          <div class="li-icon liked-icon"><i class="fa-solid fa-heart"></i></div>
+          <div class="li-info">
+            <div class="li-name">Liked Songs</div>
+            <div class="li-meta">Playlist • <span id="likedCount">0</span> songs</div>
+          </div>
+        </a>
 
-<script>
-    function sendToWhatsApp() {
-    var name = document.getElementById("name").value.trim();
-    var phone = document.getElementById("phone").value.trim();
-    var email = document.getElementById("email").value.trim();
+        <!-- Downloaded -->
+        <a class="library-item" data-view="downloaded" id="dlLibItem">
+          <div class="li-icon dl-icon"><i class="fa-solid fa-download"></i></div>
+          <div class="li-info">
+            <div class="li-name">Downloaded</div>
+            <div class="li-meta">Playlist • <span id="dlCount">0</span> songs</div>
+          </div>
+        </a>
 
-    // Validation
-    if (name === "" || phone === "" || email === "") {
-        alert("Please fill all fields");
-        return;
-    }
+        <div class="library-divider"></div>
 
-    if (phone.length !== 10) {
-        alert("Phone number must be 10 digits");
-        return;
-    }
+        <!-- Dynamic playlists injected here -->
+        <div id="sidebarPlaylists"></div>
+      </div>
+    </div>
+  </aside>
 
-    // Message format
-    var message = encodeURIComponent(
-        "📩 New Client Inquiry\n\n" +
-        "👤 Name: " + name + "\n" +
-        "📞 Phone: " + phone + "\n" +
-        "📧 Email: " + email
-    );
+  <!-- ─── MAIN CONTENT ─────────────────────────── -->
+  <main class="main-content" id="mainContent">
 
-    // Replace with your number (no +, no spaces)
-    var whatsappNumber = "919864445866";
+    <!-- ▸▸ HOME VIEW ──────────────────────────── -->
+    <div id="view-home" class="view active">
+      <div class="view-header" id="homeHeader" style="background: linear-gradient(180deg, #1a237e 0%, #121212 100%); padding-top: 80px;">
+        <h1 id="homeGreeting">Good evening 👋</h1>
+      </div>
+      <div class="view-body">
+        <!-- Quick access row -->
+        <div class="quick-grid" id="quickGrid"></div>
 
-    var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+        <!-- Genre sections auto-rendered by JS -->
+        <div id="homeSections"></div>
+      </div>
+    </div>
 
-    window.open(url, "_blank");
-    }
-</script>
+    <!-- ▸▸ SEARCH VIEW ──────────────────────────── -->
+    <div id="view-search" class="view">
+      <div class="search-sticky">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="What do you want to listen to?" autocomplete="off" spellcheck="false" />
+          <button class="search-clear-btn" id="searchClearBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="view-body">
+        <!-- Categories (shown when search is empty) -->
+        <div id="searchBrowse">
+          <div class="section-header"><h2>Browse by category</h2></div>
+          <div class="category-grid" id="categoryGrid"></div>
+        </div>
+        <!-- Results (shown when typing) -->
+        <div id="searchResults" style="display:none">
+          <div class="section-header">
+            <h2>Results for "<span id="searchQueryLabel"></span>"</h2>
+          </div>
+          <div class="table-header">
+            <span>#</span><span>Title</span><span>Album</span><span>Genre</span><span>Actions</span>
+          </div>
+          <div id="searchTable"></div>
+        </div>
+        <!-- No results -->
+        <div id="searchNoResults" style="display:none" class="empty-state">
+          <i class="fa-solid fa-face-sad-tear fa-3x"></i>
+          <p>No results found</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▸▸ LIKED SONGS VIEW ─────────────────────── -->
+    <div id="view-liked" class="view">
+      <div class="view-header" style="background: linear-gradient(180deg, #450af5 0%, #121212 100%);">
+        <div class="playlist-header-info">
+          <div class="ph-icon liked-header-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div>
+            <div class="ph-type">Playlist</div>
+            <h1 class="ph-title">Liked Songs</h1>
+            <div class="ph-meta"><span id="likedHeaderCount">0</span> songs</div>
+          </div>
+        </div>
+      </div>
+      <div class="view-body">
+        <div class="table-header">
+          <span>#</span><span>Title</span><span>Album</span><span>Genre</span><span>Actions</span>
+        </div>
+        <div id="likedTable"></div>
+        <div id="likedEmpty" class="empty-state" style="display:none">
+          <i class="fa-solid fa-heart fa-3x"></i>
+          <p>Songs you like will appear here</p>
+          <button onclick="navigate('home')">Find songs</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▸▸ DOWNLOADED VIEW ──────────────────────── -->
+    <div id="view-downloaded" class="view">
+      <div class="view-header" style="background: linear-gradient(180deg, #006450 0%, #121212 100%);">
+        <div class="playlist-header-info">
+          <div class="ph-icon dl-header-icon">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <div>
+            <div class="ph-type">Playlist</div>
+            <h1 class="ph-title">Downloaded</h1>
+            <div class="ph-meta"><span id="dlHeaderCount">0</span> songs</div>
+          </div>
+        </div>
+      </div>
+      <div class="view-body">
+        <div class="table-header">
+          <span>#</span><span>Title</span><span>Album</span><span>Genre</span><span>Actions</span>
+        </div>
+        <div id="downloadedTable"></div>
+        <div id="dlEmpty" class="empty-state" style="display:none">
+          <i class="fa-solid fa-download fa-3x"></i>
+          <p>Songs you download will appear here</p>
+          <button onclick="navigate('home')">Browse songs</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▸▸ PLAYLIST VIEW ───────────────────────── -->
+    <div id="view-playlist" class="view">
+      <div class="view-header" id="playlistViewHeader" style="background: linear-gradient(180deg, #535353 0%, #121212 100%);">
+        <div class="playlist-header-info">
+          <div class="ph-icon pl-icon" id="playlistViewIcon">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <div>
+            <div class="ph-type">Playlist</div>
+            <h1 class="ph-title" id="playlistViewTitle">Playlist</h1>
+            <div class="ph-meta"><span id="playlistViewMeta">0 songs</span></div>
+          </div>
+        </div>
+        <div class="playlist-actions">
+          <button class="icon-btn" id="renamePlaylistBtn">
+            <i class="fa-solid fa-pen"></i> Rename
+          </button>
+          <button class="icon-btn danger" id="deletePlaylistBtn">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+        </div>
+      </div>
+      <div class="view-body">
+        <div class="table-header">
+          <span>#</span><span>Title</span><span>Album</span><span>Genre</span><span>Actions</span>
+        </div>
+        <div id="playlistTable"></div>
+        <div id="playlistEmpty" class="empty-state" style="display:none">
+          <i class="fa-solid fa-music fa-3x"></i>
+          <p>Add songs to get started</p>
+          <button onclick="navigate('home')">Browse songs</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div><!-- end .layout -->
+
+<!-- ══════════════════════════════════════════════
+     BOTTOM PLAYER BAR
+══════════════════════════════════════════════ -->
+<footer class="player-bar">
+
+  <!-- Left: now playing info -->
+  <div class="pb-left">
+    <div class="pb-left-clickable" id="pbLeftClickable" title="Open Now Playing">
+      <div class="pb-art" id="pbArt">
+        <i class="fa-solid fa-music"></i>
+      </div>
+      <div class="pb-song-info">
+        <div class="pb-title" id="pbTitle">—</div>
+        <div class="pb-artist" id="pbArtist">Choose a song</div>
+      </div>
+      <i class="fa-solid fa-up-right-and-down-left-from-center pb-expand-icon"></i>
+    </div>
+    <button class="pb-like-btn" id="pbLikeBtn" title="Like">
+      <i class="fa-regular fa-heart" id="pbLikeIcon"></i>
+    </button>
+    <button class="pb-dl-btn" id="pbDlBtn" title="Download song">
+      <i class="fa-solid fa-download" id="pbDlIcon"></i>
+    </button>
+  </div>
+
+  <!-- Center: controls + progress -->
+  <div class="pb-center">
+    <div class="pb-controls">
+      <button class="pb-ctrl" id="pbShuffleBtn" title="Shuffle">
+        <i class="fa-solid fa-shuffle"></i>
+      </button>
+      <button class="pb-ctrl" id="pbPrevBtn" title="Previous">
+        <i class="fa-solid fa-backward-step"></i>
+      </button>
+      <button class="pb-ctrl play-btn" id="pbPlayBtn" title="Play / Pause">
+        <i class="fa-solid fa-play" id="pbPlayIcon"></i>
+      </button>
+      <button class="pb-ctrl" id="pbNextBtn" title="Next">
+        <i class="fa-solid fa-forward-step"></i>
+      </button>
+      <button class="pb-ctrl" id="pbRepeatBtn" title="Repeat">
+        <i class="fa-solid fa-repeat"></i>
+      </button>
+    </div>
+    <div class="pb-progress">
+      <span class="pb-time" id="pbCurrentTime">0:00</span>
+      <div class="pb-progress-bar" id="pbProgressBar">
+        <div class="pb-progress-fill" id="pbProgressFill"></div>
+        <div class="pb-progress-thumb"></div>
+      </div>
+      <span class="pb-time" id="pbTotalTime">0:00</span>
+    </div>
+  </div>
+
+  <!-- Right: volume -->
+  <div class="pb-right">
+    <button class="pb-vol-btn" id="pbMuteBtn" title="Mute">
+      <i class="fa-solid fa-volume-high" id="pbVolIcon"></i>
+    </button>
+    <input type="range" id="pbVolumeSlider" class="pb-volume-slider" min="0" max="100" value="70" />
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     MODALS
+══════════════════════════════════════════════ -->
+
+<!-- Create Playlist -->
+<div class="modal-overlay" id="modalCreatePlaylist">
+  <div class="modal">
+    <h3>Create Playlist</h3>
+    <input type="text" id="newPlaylistNameInput" placeholder="Give your playlist a name…" maxlength="50" />
+    <div class="modal-actions">
+      <button class="btn-cancel" id="cancelCreatePlaylist">Cancel</button>
+      <button class="btn-primary" id="confirmCreatePlaylist">Create</button>
+    </div>
+  </div>
+</div>
+
+<!-- Rename Playlist -->
+<div class="modal-overlay" id="modalRenamePlaylist">
+  <div class="modal">
+    <h3>Rename Playlist</h3>
+    <input type="text" id="renamePlaylistNameInput" placeholder="New playlist name…" maxlength="50" />
+    <div class="modal-actions">
+      <button class="btn-cancel" id="cancelRenamePlaylist">Cancel</button>
+      <button class="btn-primary" id="confirmRenamePlaylist">Rename</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add to Playlist -->
+<div class="modal-overlay" id="modalAddToPlaylist">
+  <div class="modal">
+    <h3>Add to playlist</h3>
+    <div class="playlist-picker-list" id="playlistPickerList"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="cancelAddToPlaylist">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     FULLSCREEN NOW PLAYING PANEL
+══════════════════════════════════════════════ -->
+<div class="np-overlay" id="npOverlay">
+  <div class="np-topbar">
+    <button class="np-close-btn" id="npCloseBtn" title="Close">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <span class="np-topbar-label">Now Playing</span>
+    <button class="np-close-btn" id="npAddBtn" title="Add to playlist">
+      <i class="fa-solid fa-ellipsis"></i>
+    </button>
+  </div>
+
+  <div class="np-art-wrap">
+    <div class="np-art" id="npArt"></div>
+  </div>
+
+  <div class="np-info-row">
+    <div class="np-info">
+      <div class="np-title" id="npTitle">—</div>
+      <div class="np-artist" id="npArtist">—</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="np-dl-btn" id="npDlBtn" title="Download">
+        <i class="fa-solid fa-download" id="npDlIcon"></i>
+      </button>
+      <button class="np-like-btn" id="npLikeBtn" title="Like">
+        <i class="fa-regular fa-heart" id="npLikeIcon"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="np-progress-section">
+    <div class="np-progress-bar" id="npProgressBar">
+      <div class="np-progress-fill" id="npProgressFill"></div>
+      <div class="np-progress-thumb" id="npProgressThumb"></div>
+    </div>
+    <div class="np-time-row">
+      <span id="npCurrentTime">0:00</span>
+      <span id="npTotalTime">0:00</span>
+    </div>
+  </div>
+
+  <div class="np-controls">
+    <button class="np-ctrl" id="npShuffleBtn"><i class="fa-solid fa-shuffle"></i></button>
+    <button class="np-ctrl" id="npPrevBtn"><i class="fa-solid fa-backward-step"></i></button>
+    <button class="np-ctrl np-play-btn" id="npPlayBtn">
+      <i class="fa-solid fa-play" id="npPlayIcon"></i>
+    </button>
+    <button class="np-ctrl" id="npNextBtn"><i class="fa-solid fa-forward-step"></i></button>
+    <button class="np-ctrl" id="npRepeatBtn"><i class="fa-solid fa-repeat"></i></button>
+  </div>
+
+  <div class="np-volume-row">
+    <i class="fa-solid fa-volume-low np-vol-icon-sm"></i>
+    <input type="range" id="npVolumeSlider" class="np-volume-slider" min="0" max="100" value="70" />
+    <i class="fa-solid fa-volume-high np-vol-icon-sm"></i>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Hidden audio -->
+<audio id="audioEl"></audio>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
